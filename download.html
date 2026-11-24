@@ -254,13 +254,13 @@ function readHit(k) {
   document.body.appendChild(f);
 }
 
-// 3 秒还没读回来就先亮出基数，别一直空着
+// 兜底：8 秒还没读回来就先亮出基数，别一直空着
 setTimeout(function () {
   ['homework', 'baodeng', 'welcome'].forEach(function (k) {
     var el = document.getElementById('c-' + k);
     if (el && (el.textContent === '—' || el.textContent === '')) paint(k, 1);
   });
-}, 3200);
+}, 8000);
 
 ['homework', 'baodeng', 'welcome'].forEach(readHit);
 })();
