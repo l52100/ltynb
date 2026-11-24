@@ -76,6 +76,22 @@
   .dl:hover{ background:var(--green2); }
   .dl small{ opacity:.75; font-weight:400; font-size:12px; }
 
+  /* 暂停下载态 */
+  .dl.off{ background:#2b2b38; color:#8d8da0; cursor:not-allowed; border:1px dashed #40405a; flex-direction:column; gap:3px; line-height:1.25; height:52px; }
+    background:#2b2b38; color:#8a8a9a; cursor:not-allowed;
+    border:1px dashed #3d3d4e;
+  }
+  .dl.off:hover{ background:#2b2b38; }
+  .dl.off small{ color:#71718a; opacity:1; font-size:11.5px; letter-spacing:.04em; }
+  .note{ margin-top:11px; font-size:12px; line-height:1.85; color:#6a6a7d; text-align:center; }
+    margin-top:11px; font-size:12.5px; line-height:1.8; color:var(--mute);
+    text-align:center;
+  }
+  .note b{ color:var(--amber); font-weight:600; }
+  .app.off{ opacity:.82; }
+  .app.off:hover{ transform:none; border-color:var(--line); }
+  .ver b.warn{ color:var(--amber); }
+
   .guide{
     display:flex; align-items:center; justify-content:center; gap:7px;
     margin-top:9px; height:40px;
@@ -126,12 +142,12 @@
 
   <div class="grid">
 
-    <section class="app">
+    <section class="app off">
       <div class="head">
         <div class="icon homework">作</div>
         <div>
           <div class="name">AI作业助手</div>
-          <div class="ver">当前版本 <b>v1.31</b> · Win 10/11</div>
+          <div class="ver"><b class="warn">重大版本更新中</b> · 暂停下载</div>
         </div>
       </div>
       <p class="desc">
@@ -143,13 +159,13 @@
         <span class="tag">黑名单</span>
         <span class="tag">台账记录</span>
       </div>
-      <a class="dl" href="https://aihw2026.oss-cn-hangzhou.aliyuncs.com/AIHomeworkAide_v1.31_Setup.exe" download="AIHomeworkAide_v1.31_Setup.exe">
-        下载 安装包 <small>444 KB</small>
-      </a>
+      <!-- 2026-11-25 临时下架：重大版本更新，恢复时把下面 div 换回 <a class="dl" href="..."> 并同步 .ver -->
+      <div class="dl off"><span>重大版本更新中 · 暂停下载</span><small>后续开放</small></div>
+      <p class="note">这一轮是<b>重大版本更新</b>，下载先关掉。<br>新版做完在本页和群里通知开放。</p>
       <a class="guide" href="guide-homework.html">使用说明
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
       </a>
-      <div class="cnt">已下载 <b id="c-homework">—</b> 次</div>
+      <div class="cnt">更新完成后恢复下载</div>
     </section>
 
     <section class="app">
