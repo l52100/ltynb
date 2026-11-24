@@ -7,13 +7,13 @@
   --accent:#23a55e; --accent2:#2dbe72;
   --warn:#d6a53e; --bad:#e2564f;
 }
+html{ background:#15151c; }
 body{
-  width:100%; max-width:840px; margin:0 auto;
-  background:var(--bg); color:var(--txt);
+  width:100%; background:var(--bg); color:var(--txt);
   font-family:"Microsoft YaHei UI","PingFang SC","Segoe UI",system-ui,sans-serif;
-  -webkit-font-smoothing:antialiased; padding:34px 34px 26px;
+  -webkit-font-smoothing:antialiased; padding:34px 0 26px;
 }
-.sheet{ width:100%; }
+.sheet{ width:100%; max-width:840px; margin:0 auto; padding:0 34px; }
 
 /* 网页版顶部返回链接（长图里会被裁掉，不影响） */
 .topnav{ margin-bottom:18px; }
