@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>语音厅工具站 · AI作业助手 / 自动爆灯</title>
+<title>语音厅工具站 · AI作业助手 / 自动爆灯 / 欢迎机器人</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   :root{
@@ -30,7 +30,7 @@
   h1 span{ background:linear-gradient(90deg,var(--green2),#5ad39a); -webkit-background-clip:text; background-clip:text; color:transparent; }
   .lead{ color:var(--sub); font-size:15px; line-height:1.7; }
 
-  .grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:36px; }
+  .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(272px,1fr)); gap:20px; margin-bottom:36px; }
 
   .app{
     background:var(--card); border:1px solid var(--line); border-radius:18px;
@@ -47,6 +47,7 @@
   }
   .icon.homework{ background:linear-gradient(140deg,#2f6fd0,#1e4c96); }
   .icon.lamp{ background:linear-gradient(140deg,#23a55e,#167c42); }
+  .icon.welcome{ background:linear-gradient(140deg,#e0559b,#a8317a); }
 
   .name{ font-size:19px; font-weight:700; }
   .ver{ font-size:12px; color:var(--mute); margin-top:4px; }
@@ -94,7 +95,7 @@
   <header>
     <div class="logo"><i></i>语音厅工具</div>
     <h1>开播助手<span>配套工具</span></h1>
-    <p class="lead">给语音厅主播用的两件手动活自动化：写作业、爆灯。<br>纯接口运行，不开面板、不动鼠标、不占前台。</p>
+    <p class="lead">给语音厅主播用的三件手动活自动化：写作业、爆灯、欢迎。<br>纯接口运行，不开面板、不动鼠标、不占前台。</p>
   </header>
 
   <div class="grid">
@@ -143,14 +144,37 @@
       </a>
     </section>
 
+    <section class="app">
+      <div class="head">
+        <div class="icon welcome">迎</div>
+        <div>
+          <div class="name">欢迎机器人</div>
+          <div class="ver">当前版本 <b>v1.3</b> · Windows 10/11 64 位</div>
+        </div>
+      </div>
+      <p class="desc">
+        游客进厅自动欢迎、送礼自动感谢。男女文案分开写，前缀固定只改后半句；还能设循环喊话，隔几分钟刷一条。纯接口直发，<em>不抢输入框、不占前台</em>，你在旁边直播也没影响。
+      </p>
+      <div class="tags">
+        <span class="tag">进厅即欢迎</span>
+        <span class="tag">男女分开</span>
+        <span class="tag">送礼感谢</span>
+        <span class="tag">循环喊话</span>
+      </div>
+      <a class="dl" href="https://aihw2026.oss-cn-hangzhou.aliyuncs.com/WelcomeBot_v1.3_Setup.exe" download="WelcomeBot_v1.3_Setup.exe">
+        下载 安装包 <small>232 KB</small>
+      </a>
+    </section>
+
   </div>
 
   <div class="tips">
     <h2>装之前先看这里</h2>
     <ul>
-      <li>两个软件都<b>必须配合开播助手客户端（KaiBo PC Assistant）使用</b>，客户端要装好并登录自己的账号。</li>
+      <li>三个软件都<b>必须配合开播助手客户端（KaiBo PC Assistant）使用</b>，客户端要装好并登录自己的账号。</li>
       <li>第一次打开要<b>输入卡密</b>激活，卡密找发给你的人要。激活后自动绑定这台电脑。</li>
       <li>装好后桌面上会有图标。软件支持在线更新，新版本在「设置」里点「检查更新」就能升级。</li>
+      <li>如果提示<b>调试口 9222 不通</b>，欢迎机器人是弹窗点「是」自动处理，自动爆灯点「开始」会自己处理；也可以手动跑安装目录里的「开调试口.cmd」。</li>
       <li>如果安装或运行被安全软件拦住，选择<b>允许</b>或加白名单即可，软件只访问本地客户端和平台接口。</li>
     </ul>
   </div>
